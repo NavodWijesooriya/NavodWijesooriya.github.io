@@ -1,140 +1,230 @@
-<style>
-    /* General Styles */
-    body {
-        font-family: 'Arial', sans-serif;
-        background-color: #eef2f7;
-        color: #333;
-        margin: 0;
-        padding: 0;
-    }
-
-    .container {
-        max-width: 900px;
-        margin: 50px auto;
-        background: #ffffff;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        padding: 40px;
-        border-radius: 12px;
-    }
-
-    h1, h2 {
-        color: #000; /* Changed to black */
-    }
-
-    h1 {
-        font-size: 3.5em;
-        text-align: center;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-    }
-
-    h1 span {
-        display: block;
-        font-size: 0.5em;
-        color: #888;
-        font-style: italic;
-    }
-
-    h2 {
-        font-size: 2em;
-        margin-top: 40px;
-        margin-bottom: 20px;
-        border-bottom: 3px solid #007bff;
-        padding-bottom: 8px;
-    }
-
-    .section {
-        margin-bottom: 40px;
-    }
-
-    .personal-entry,
-    .skills-entry,
-    .work-entry,
-    .education-entry {
-        margin-bottom: 20px;
-    }
-
-    .personal-entry span,
-    .skills-entry span,
-    .work-entry span,
-    .education-entry span {
-        font-weight: bold;
-        color: #000; /* Changed to black */
-    }
-
-    a {
-        color: #007bff;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    .work-entry,
-    .education-entry {
-        padding-left: 15px;
-        border-left: 4px solid #007bff;
-    }
-
-    /* Table for Skills Section */
-    .skills-table {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .skills-cell {
-        background-color: #f9f9f9;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .skills-cell span {
-        font-weight: bold;
-        display: block;
-        margin-bottom: 10px;
-        color: #000; /* Changed to black */
-    }
-
-    /* Footer Styles */
-    .footer {
-        text-align: center;
-        font-size: 1em;
-        margin-top: 50px;
-        padding-top: 10px;
-        border-top: 1px solid #ddd;
-        color: #555;
-    }
-
-    .footer a {
-        color: #007bff;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .footer a:hover {
-        text-decoration: underline;
-    }
-
-    /* Responsive Design */
-    @media screen and (max-width: 600px) {
-        h1 {
-            font-size: 2.5em;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navod Wijesooriya Online CV</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eef2f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
-            padding: 20px;
+            max-width: 900px;
+            margin: 50px auto;
+            background: #ffffff;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        h1, h2 {
+            color: #000; /* Changed to black */
+        }
+
+        h1 {
+            font-size: 3.5em;
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        h1 span {
+            display: block;
+            font-size: 0.5em;
+            color: #888;
+            font-style: italic;
         }
 
         h2 {
-            font-size: 1.5em;
+            font-size: 2em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 8px;
         }
 
-        .skills-table {
-            grid-template-columns: 1fr;
+        .section {
+            margin-bottom: 40px;
         }
-    }
-</style>
+
+        .personal-entry,
+        .skills-entry,
+        .work-entry,
+        .education-entry {
+            margin-bottom: 20px;
+        }
+
+        .personal-entry span,
+        .skills-entry span,
+        .work-entry span,
+        .education-entry span {
+            font-weight: bold;
+            color: #000; /* Changed to black */
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .work-entry,
+        .education-entry {
+            padding-left: 15px;
+            border-left: 4px solid #007bff;
+        }
+
+        /* Table for Skills Section */
+        .skills-table {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skills-cell {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills-cell span {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #000; /* Changed to black */
+        }
+
+        /* Footer Styles */
+        .footer {
+            text-align: center;
+            font-size: 1em;
+            margin-top: 50px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+            color: #555;
+        }
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .skills-table {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Navod Wijesooriya
+            <span>Web Developer and ICT Student</span>
+        </h1>
+
+        <!-- Personal Details -->
+        <div class="section">
+            <h2>Personal Details</h2>
+            <div class="personal-entry"><span>Birth:</span> Nov 03, 2005</div>
+            <div class="personal-entry"><span>Address:</span> 88/D Mathammana, Minuwangoda</div>
+            <div class="personal-entry"><span>Phone:</span> +94 71 4128942</div>
+            <div class="personal-entry"><span>Mail:</span> <a href="mailto:navodtwijesooriya@gmail.com">navodtwijesooriya@gmail.com</a></div>
+            <div class="personal-entry"><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/navod-wijesooriya" target="_blank">linkedin.com/in/navod-wijesooriya</a></div>
+            <div class="personal-entry"><span>GitHub:</span> <a href="https://github.com/navodwijesooriya" target="_blank">github.com/navodwijesooriya</a></div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2>Education</h2>
+            <div class="education-entry">
+                <span>Bachelor of Information Technology</span> (2023-present)<br>
+                <em>University of Colombo</em><br>
+            </div>
+            <div class="education-entry">
+                <span>Foundation Information Technology</span> (2023 January)<br>
+                <em>University of Colombo</em><br>
+                Achieved high distinctions in mathematics and computer science.
+            </div>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="section">
+            <h2>Work Experience</h2>
+            <div class="work-entry">
+                <span>Front-End Developer</span> (2024-present)<br>
+                <em>Tech Innovators Inc.</em><br>
+                Collaborated with cross-functional teams to design and develop user-friendly web applications. Built scalable front-end architectures using React and Next.js.
+            </div>
+            <div class="work-entry">
+                <span>Software Development Intern</span> (2024-present)<br>
+                <em>Creative Solutions Ltd.</em><br>
+                Assisted in developing an e-commerce platform. Gained experience with Firebase integration and Tailwind CSS.
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills-table">
+                <div class="skills-cell">
+                    <span>Programming:</span>
+                    JavaScript, Python, HTML, CSS
+                </div>
+                <div class="skills-cell">
+                    <span>Frameworks:</span>
+                    React, Next.js, Tailwind CSS
+                </div>
+                <div class="skills-cell">
+                    <span>Tools:</span>
+                    Git, Docker, Firebase, Postman
+                </div>
+                <div class="skills-cell">
+                    <span>Languages:</span>
+                    Sinhala (native), English (fluent)
+                </div>
+            </div>
+        </div>
+
+        <!-- References -->
+        <div class="section">
+            <h2>References</h2>
+            <p>Available upon request.</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2025 Navod Wijesooriya | All Rights Reserved | <a href="mailto:navodtwijesooriya@gmail.com">Contact Me</a>
+        </div>
+    </div>
+</body>
+</html>
