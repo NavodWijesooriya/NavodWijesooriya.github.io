@@ -1,146 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navod Wijesooriya</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-        nav {
-            background: #444;
-            display: flex;
-            justify-content: center;
-            padding: 0.5rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 1rem;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 1rem;
-            text-align: center;
-        }
-        section {
-            margin-bottom: 3rem;
-        }
-        section h2 {
-            font-size: 1.8rem;
-            color: #333;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        footer .social-icons {
-            margin: 1rem 0;
-        }
-        footer .social-icons a {
-            color: #fff;
-            margin: 0 0.5rem;
-            font-size: 1.5rem;
-            text-decoration: none;
-        }
-        footer .social-icons a:hover {
-            color: #1da1f2;
-        }
-        /* Responsive design */
-        @media (max-width: 600px) {
-            nav a {
-                margin: 0 0.5rem;
-                font-size: 0.9rem;
-            }
-            section h2 {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const links = document.querySelectorAll('nav a');
-            links.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetId = link.getAttribute('href').slice(1);
-                    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
-                });
-            });
-        });
-    </script>
-</head>
-<body>
-    <header>
-        <h1>Welcome to Navod Wijesooriya's Page</h1>
-    </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi, I'm Navod Wijesooriya, a passionate web developer and ICT student. I specialize in building dynamic and responsive web applications and enjoy collaborating on innovative projects.</p>
-            <p>With expertise in technologies like React, Next.js, Firebase, and Tailwind CSS, I strive to deliver user-friendly and efficient solutions.</p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <strong>Tic-Tac-Toe Game</strong> - A fun React-based project with AI for unbeatable gameplay.
-                </li>
-                <li>
-                    <strong>Travel Booking Website</strong> - A Next.js and Firebase-powered platform for seamless trip planning.
-                </li>
-                <li>
-                    <strong>Admin Panel</strong> - Built using Tailwind CSS and Firestore for real-time data management.
-                </li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:navodtwijesooriya@gmail.com">navodtwijesooriya@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/navod-wijesooriya" target="_blank">Navod Wijesooriya</a></p>
-            <p>GitHub: <a href="https://github.com/navodwijesooriya" target="_blank">github.com/navodwijesooriya</a></p>
-        </section>
-    </div>
-    <footer>
-        <p>&copy; 2025 Navod Wijesooriya. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="https://twitter.com/navodwijesooriya" target="_blank" aria-label="Twitter">&#x1F426;</a>
-            <a href="https://github.com/navodwijesooriya" target="_blank" aria-label="GitHub">&#x1F4BB;</a>
-            <a href="https://www.linkedin.com/in/navod-wijesooriya" target="_blank" aria-label="LinkedIn">&#x1F465;</a>
-        </div>
-    </footer>
-</body>
-</html>
+\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+    \textheight=700px                    % Saving trees ;-)
+\usepackage{url}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%
+    \usefont{OT1}{phv}{b}{n}%
+    \sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}			% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+        \Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+        \par \normalsize \normalfont}
+
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+        \large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+        \par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+        \parbox{\spacebox}{        % Box to align text
+        \textit{#1}}		       % Entry name (birth, address, etc.)
+        \hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+        \parbox{\spacebox}{        % Box to align text
+        \textit{#1}}			   % Entry name (birth, address, etc.)
+        \hspace{1.5em} #2 \par}    % Entry value	
+
+\newcommand{\EducationEntry}[4]{
+        \noindent \textbf{#1} \hfill      % Study
+        \colorbox{Black}{%
+            \parbox{6em}{%
+            \hfill\color{White}#2}} \par  % Duration
+        \noindent \textit{#3} \par        % School
+        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \normalsize \par}
+
+\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
+        \noindent \textbf{#1} \hfill      % Jobname
+        \colorbox{Black}{\color{White}#2} \par  % Duration
+        \noindent \textit{#3} \par              % Company
+        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \normalsize \par}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+
+\MyName{Navod Wijesooriya}
+\MySlogan{Web Developer and ICT Student}
+
+\sepspace
+
+%%% Personal details
+%%% ------------------------------------------------------------
+\NewPart{Personal details}{}
+
+\PersonalEntry{Birth}{May 12, 1998}
+\PersonalEntry{Address}{123 Web Developer Lane, Colombo, Sri Lanka}
+\PersonalEntry{Phone}{+94 77 123 4567}
+\PersonalEntry{Mail}{\url{navodwijesooriya@example.com}}
+\PersonalEntry{LinkedIn}{\url{https://www.linkedin.com/in/navod-wijesooriya}}
+\PersonalEntry{GitHub}{\url{https://github.com/navodwijesooriya}}
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+
+\EducationEntry{BSc. in Information and Communication Technology}{2017-2021}{University of Colombo}{Specialized in web development and database systems. Worked on various projects using modern web technologies.}
+\sepspace
+
+\EducationEntry{High School Diploma}{2014-2016}{Royal College Colombo}{Achieved high distinctions in mathematics and computer science.}
+
+%%% Work experience
+%%% ------------------------------------------------------------
+\NewPart{Work experience}{}
+
+\WorkEntry{Front-End Developer}{2022-present}{Tech Innovators Inc.}{Collaborated with cross-functional teams to design and develop user-friendly web applications. Built scalable front-end architectures using React and Next.js.}
+\sepspace
+
+\WorkEntry{Software Development Intern}{2021-2022}{Creative Solutions Ltd.}{Assisted in developing an e-commerce platform. Gained experience with Firebase integration and Tailwind CSS.}
+
+%%% Skills
+%%% ------------------------------------------------------------
+\NewPart{Skills}{}
+
+\SkillsEntry{Programming}{JavaScript, Python, HTML, CSS}
+\SkillsEntry{Frameworks}{React, Next.js, Tailwind CSS}
+\SkillsEntry{Tools}{Git, Docker, Firebase, Postman}
+\SkillsEntry{Languages}{Sinhala (native), English (fluent)}
+
+%%% References
+%%% ------------------------------------------------------------
+\NewPart{References}{}
+Available upon request.
+
+\end{document}
