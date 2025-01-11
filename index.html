@@ -1,120 +1,106 @@
-\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navod Wijesooriya - CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
 
-\usepackage[english]{babel}
-\usepackage[utf8x]{inputenc}
-\usepackage[protrusion=true,expansion=true]{microtype}
-\usepackage{amsmath,amsfonts,amsthm}     % Math packages
-\usepackage{graphicx}                    % Enable pdflatex
-\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
-\usepackage{geometry}
-    \textheight=700px                    % Saving trees ;-)
-\usepackage{url}
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-\frenchspacing              % Better looking spacings after periods
-\pagestyle{empty}           % No pagenumbers/headers/footers
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 5px;
+        }
 
-%%% Custom sectioning (sectsty package)
-%%% ------------------------------------------------------------
-\usepackage{sectsty}
+        h2 {
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #444;
+        }
 
-\sectionfont{%
-    \usefont{OT1}{phv}{b}{n}%
-    \sectionrule{0pt}{0pt}{-5pt}{3pt}}
+        .personal-entry, .skills-entry, .work-entry, .education-entry {
+            margin-bottom: 15px;
+        }
 
-%%% Macros
-%%% ------------------------------------------------------------
-\newlength{\spacebox}
-\settowidth{\spacebox}{8888888888}			% Box to align text
-\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+        .personal-entry span,
+        .skills-entry span,
+        .work-entry span,
+        .education-entry span {
+            font-weight: bold;
+        }
 
-\newcommand{\MyName}[1]{ % Name
-        \Huge \usefont{OT1}{phv}{b}{n} \hfill #1
-        \par \normalsize \normalfont}
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
 
-\newcommand{\MySlogan}[1]{ % Slogan (optional)
-        \large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
-        \par \normalsize \normalfont}
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Navod Wijesooriya</h1>
+        <p style="text-align: center; font-style: italic;">Web Developer and ICT Student</p>
 
-\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+        <h2>Personal Details</h2>
+        <div class="personal-entry"><span>Birth:</span> May 12, 1998</div>
+        <div class="personal-entry"><span>Address:</span> 123 Web Developer Lane, Colombo, Sri Lanka</div>
+        <div class="personal-entry"><span>Phone:</span> +94 77 123 4567</div>
+        <div class="personal-entry"><span>Mail:</span> <a href="mailto:navodwijesooriya@example.com">navodwijesooriya@example.com</a></div>
+        <div class="personal-entry"><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/navod-wijesooriya" target="_blank">https://www.linkedin.com/in/navod-wijesooriya</a></div>
+        <div class="personal-entry"><span>GitHub:</span> <a href="https://github.com/navodwijesooriya" target="_blank">https://github.com/navodwijesooriya</a></div>
 
-\newcommand{\PersonalEntry}[2]{
-        \noindent\hangindent=2em\hangafter=0 % Indentation
-        \parbox{\spacebox}{        % Box to align text
-        \textit{#1}}		       % Entry name (birth, address, etc.)
-        \hspace{1.5em} #2 \par}    % Entry value
+        <h2>Education</h2>
+        <div class="education-entry">
+            <span>BSc. in Information and Communication Technology</span> (2017-2021)<br>
+            <em>University of Colombo</em><br>
+            Specialized in web development and database systems. Worked on various projects using modern web technologies.
+        </div>
+        <div class="education-entry">
+            <span>High School Diploma</span> (2014-2016)<br>
+            <em>Royal College Colombo</em><br>
+            Achieved high distinctions in mathematics and computer science.
+        </div>
 
-\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
-        \noindent\hangindent=2em\hangafter=0 % Indentation
-        \parbox{\spacebox}{        % Box to align text
-        \textit{#1}}			   % Entry name (birth, address, etc.)
-        \hspace{1.5em} #2 \par}    % Entry value	
+        <h2>Work Experience</h2>
+        <div class="work-entry">
+            <span>Front-End Developer</span> (2022-present)<br>
+            <em>Tech Innovators Inc.</em><br>
+            Collaborated with cross-functional teams to design and develop user-friendly web applications. Built scalable front-end architectures using React and Next.js.
+        </div>
+        <div class="work-entry">
+            <span>Software Development Intern</span> (2021-2022)<br>
+            <em>Creative Solutions Ltd.</em><br>
+            Assisted in developing an e-commerce platform. Gained experience with Firebase integration and Tailwind CSS.
+        </div>
 
-\newcommand{\EducationEntry}[4]{
-        \noindent \textbf{#1} \hfill      % Study
-        \colorbox{Black}{%
-            \parbox{6em}{%
-            \hfill\color{White}#2}} \par  % Duration
-        \noindent \textit{#3} \par        % School
-        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
-        \normalsize \par}
+        <h2>Skills</h2>
+        <div class="skills-entry"><span>Programming:</span> JavaScript, Python, HTML, CSS</div>
+        <div class="skills-entry"><span>Frameworks:</span> React, Next.js, Tailwind CSS</div>
+        <div class="skills-entry"><span>Tools:</span> Git, Docker, Firebase, Postman</div>
+        <div class="skills-entry"><span>Languages:</span> Sinhala (native), English (fluent)</div>
 
-\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
-        \noindent \textbf{#1} \hfill      % Jobname
-        \colorbox{Black}{\color{White}#2} \par  % Duration
-        \noindent \textit{#3} \par              % Company
-        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
-        \normalsize \par}
-
-%%% Begin Document
-%%% ------------------------------------------------------------
-\begin{document}
-
-\MyName{Navod Wijesooriya}
-\MySlogan{Web Developer and ICT Student}
-
-\sepspace
-
-%%% Personal details
-%%% ------------------------------------------------------------
-\NewPart{Personal details}{}
-
-\PersonalEntry{Birth}{May 12, 1998}
-\PersonalEntry{Address}{123 Web Developer Lane, Colombo, Sri Lanka}
-\PersonalEntry{Phone}{+94 77 123 4567}
-\PersonalEntry{Mail}{\url{navodwijesooriya@example.com}}
-\PersonalEntry{LinkedIn}{\url{https://www.linkedin.com/in/navod-wijesooriya}}
-\PersonalEntry{GitHub}{\url{https://github.com/navodwijesooriya}}
-
-%%% Education
-%%% ------------------------------------------------------------
-\NewPart{Education}{}
-
-\EducationEntry{BSc. in Information and Communication Technology}{2017-2021}{University of Colombo}{Specialized in web development and database systems. Worked on various projects using modern web technologies.}
-\sepspace
-
-\EducationEntry{High School Diploma}{2014-2016}{Royal College Colombo}{Achieved high distinctions in mathematics and computer science.}
-
-%%% Work experience
-%%% ------------------------------------------------------------
-\NewPart{Work experience}{}
-
-\WorkEntry{Front-End Developer}{2022-present}{Tech Innovators Inc.}{Collaborated with cross-functional teams to design and develop user-friendly web applications. Built scalable front-end architectures using React and Next.js.}
-\sepspace
-
-\WorkEntry{Software Development Intern}{2021-2022}{Creative Solutions Ltd.}{Assisted in developing an e-commerce platform. Gained experience with Firebase integration and Tailwind CSS.}
-
-%%% Skills
-%%% ------------------------------------------------------------
-\NewPart{Skills}{}
-
-\SkillsEntry{Programming}{JavaScript, Python, HTML, CSS}
-\SkillsEntry{Frameworks}{React, Next.js, Tailwind CSS}
-\SkillsEntry{Tools}{Git, Docker, Firebase, Postman}
-\SkillsEntry{Languages}{Sinhala (native), English (fluent)}
-
-%%% References
-%%% ------------------------------------------------------------
-\NewPart{References}{}
-Available upon request.
-
-\end{document}
+        <h2>References</h2>
+        <p>Available upon request.</p>
+    </div>
+</body>
+</html>
