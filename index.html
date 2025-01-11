@@ -5,37 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navod Wijesooriya - CV</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f9;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
             max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            background: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            border-radius: 8px;
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             text-align: center;
             margin-bottom: 5px;
+            color: #222;
+        }
+
+        h1 span {
+            display: block;
+            font-size: 0.5em;
+            color: #666;
+            font-style: italic;
         }
 
         h2 {
-            font-size: 1.5em;
+            font-size: 1.8em;
             margin-top: 30px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: #444;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
         }
 
-        .personal-entry, .skills-entry, .work-entry, .education-entry {
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .personal-entry,
+        .skills-entry,
+        .work-entry,
+        .education-entry {
             margin-bottom: 15px;
         }
 
@@ -44,6 +62,7 @@
         .work-entry span,
         .education-entry span {
             font-weight: bold;
+            color: #007bff;
         }
 
         a {
@@ -54,53 +73,116 @@
         a:hover {
             text-decoration: underline;
         }
+
+        .work-entry,
+        .education-entry {
+            padding-left: 10px;
+            border-left: 3px solid #007bff;
+        }
+
+        /* Table for Skills Section */
+        .skills-table {
+            display: table;
+            width: 100%;
+            margin: 15px 0;
+        }
+
+        .skills-row {
+            display: table-row;
+        }
+
+        .skills-cell {
+            display: table-cell;
+            padding: 5px 10px;
+            vertical-align: top;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .skills-cell:last-child {
+            border-right: none;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 40px;
+            color: #666;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Navod Wijesooriya</h1>
-        <p style="text-align: center; font-style: italic;">Web Developer and ICT Student</p>
+        <h1>
+            Navod Wijesooriya
+            <span>Web Developer and ICT Student</span>
+        </h1>
 
-        <h2>Personal Details</h2>
-        <div class="personal-entry"><span>Birth:</span> May 12, 1998</div>
-        <div class="personal-entry"><span>Address:</span> 123 Web Developer Lane, Colombo, Sri Lanka</div>
-        <div class="personal-entry"><span>Phone:</span> +94 77 123 4567</div>
-        <div class="personal-entry"><span>Mail:</span> <a href="mailto:navodwijesooriya@example.com">navodwijesooriya@example.com</a></div>
-        <div class="personal-entry"><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/navod-wijesooriya" target="_blank">https://www.linkedin.com/in/navod-wijesooriya</a></div>
-        <div class="personal-entry"><span>GitHub:</span> <a href="https://github.com/navodwijesooriya" target="_blank">https://github.com/navodwijesooriya</a></div>
-
-        <h2>Education</h2>
-        <div class="education-entry">
-            <span>BSc. in Information and Communication Technology</span> (2017-2021)<br>
-            <em>University of Colombo</em><br>
-            Specialized in web development and database systems. Worked on various projects using modern web technologies.
-        </div>
-        <div class="education-entry">
-            <span>High School Diploma</span> (2014-2016)<br>
-            <em>Royal College Colombo</em><br>
-            Achieved high distinctions in mathematics and computer science.
+        <!-- Personal Details -->
+        <div class="section">
+            <h2>Personal Details</h2>
+            <div class="personal-entry"><span>Birth:</span> May 12, 1998</div>
+            <div class="personal-entry"><span>Address:</span> 123 Web Developer Lane, Colombo, Sri Lanka</div>
+            <div class="personal-entry"><span>Phone:</span> +94 77 123 4567</div>
+            <div class="personal-entry"><span>Mail:</span> <a href="mailto:navodwijesooriya@example.com">navodwijesooriya@example.com</a></div>
+            <div class="personal-entry"><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/navod-wijesooriya" target="_blank">linkedin.com/in/navod-wijesooriya</a></div>
+            <div class="personal-entry"><span>GitHub:</span> <a href="https://github.com/navodwijesooriya" target="_blank">github.com/navodwijesooriya</a></div>
         </div>
 
-        <h2>Work Experience</h2>
-        <div class="work-entry">
-            <span>Front-End Developer</span> (2022-present)<br>
-            <em>Tech Innovators Inc.</em><br>
-            Collaborated with cross-functional teams to design and develop user-friendly web applications. Built scalable front-end architectures using React and Next.js.
-        </div>
-        <div class="work-entry">
-            <span>Software Development Intern</span> (2021-2022)<br>
-            <em>Creative Solutions Ltd.</em><br>
-            Assisted in developing an e-commerce platform. Gained experience with Firebase integration and Tailwind CSS.
+        <!-- Education -->
+        <div class="section">
+            <h2>Education</h2>
+            <div class="education-entry">
+                <span>BSc. in Information and Communication Technology</span> (2017-2021)<br>
+                <em>University of Colombo</em><br>
+                Specialized in web development and database systems. Worked on various projects using modern web technologies.
+            </div>
+            <div class="education-entry">
+                <span>High School Diploma</span> (2014-2016)<br>
+                <em>Royal College Colombo</em><br>
+                Achieved high distinctions in mathematics and computer science.
+            </div>
         </div>
 
-        <h2>Skills</h2>
-        <div class="skills-entry"><span>Programming:</span> JavaScript, Python, HTML, CSS</div>
-        <div class="skills-entry"><span>Frameworks:</span> React, Next.js, Tailwind CSS</div>
-        <div class="skills-entry"><span>Tools:</span> Git, Docker, Firebase, Postman</div>
-        <div class="skills-entry"><span>Languages:</span> Sinhala (native), English (fluent)</div>
+        <!-- Work Experience -->
+        <div class="section">
+            <h2>Work Experience</h2>
+            <div class="work-entry">
+                <span>Front-End Developer</span> (2022-present)<br>
+                <em>Tech Innovators Inc.</em><br>
+                Collaborated with cross-functional teams to design and develop user-friendly web applications. Built scalable front-end architectures using React and Next.js.
+            </div>
+            <div class="work-entry">
+                <span>Software Development Intern</span> (2021-2022)<br>
+                <em>Creative Solutions Ltd.</em><br>
+                Assisted in developing an e-commerce platform. Gained experience with Firebase integration and Tailwind CSS.
+            </div>
+        </div>
 
-        <h2>References</h2>
-        <p>Available upon request.</p>
+        <!-- Skills -->
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills-table">
+                <div class="skills-row">
+                    <div class="skills-cell"><span>Programming:</span> JavaScript, Python, HTML, CSS</div>
+                    <div class="skills-cell"><span>Frameworks:</span> React, Next.js, Tailwind CSS</div>
+                </div>
+                <div class="skills-row">
+                    <div class="skills-cell"><span>Tools:</span> Git, Docker, Firebase, Postman</div>
+                    <div class="skills-cell"><span>Languages:</span> Sinhala (native), English (fluent)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- References -->
+        <div class="section">
+            <h2>References</h2>
+            <p>Available upon request.</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2025 Navod Wijesooriya | All Rights Reserved
+        </div>
     </div>
 </body>
 </html>
